@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405031044) do
+ActiveRecord::Schema.define(:version => 20130405165525) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -47,8 +47,10 @@ ActiveRecord::Schema.define(:version => 20130405031044) do
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "contractor_services", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "contractor_id"
+    t.integer  "service_id"
   end
 
   create_table "contractors", :force => true do |t|
@@ -70,8 +72,11 @@ ActiveRecord::Schema.define(:version => 20130405031044) do
 
   create_table "invoices", :force => true do |t|
     t.decimal  "company_cut"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "contractor_id"
+    t.integer  "service_id"
+    t.integer  "customer_id"
   end
 
   create_table "services", :force => true do |t|

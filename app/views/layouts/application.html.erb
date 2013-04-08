@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Prosynergy</title>
+  <title>Synergy Solutions - Make Synergy Yours</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<section id="top">
+		<!--Canvas under construction-->
+		
+		<div id="hoverpicture">
+			<canvas id="canvas" width="885" height="171"></canvas>
+		</div>
+	</section>
+	<section id="midNav">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="investments.html">Investments</a></li>
+				<li><a href="insurance.html">Insurance</a></li>
+				<li><a href="mortgages.html">Mortgages</a></li>
+				<li><a href="homeeq.html">Home Equity</a></li>
+				<li><a href="autofin.html">Auto Finance</a></li>
+				<li><a href="realestate.html">Real Estate</a></li>
+				<li><a href="debtcon.html">Debt Consolidation</a></li>
+				<li><a href="joinus.html">Join our Team</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section id="content">
+	<%= yield %>
+	</section>
+	<section id="bottomInfo">
+		<footer>
+			<nav id="bottomNav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><%= link_to 'Login', 'admin/login' %></li>
+					<li><a href="aboutus.html">About us</a></li>
+				</ul>
+			</nav>
+			<p>&copy; Copyright Synergy Solutions. Designed by Synergy Solutions</p>
+		</footer>
+	</section>
 </body>
 </html>
