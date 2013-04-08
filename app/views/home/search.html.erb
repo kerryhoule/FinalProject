@@ -1,0 +1,7 @@
+<h1>Search</h1>
+
+<%= form_tag(search_results_path) do %>
+  <%= label_tag(:keywords, "Search for:") %>
+  <%= text_field_tag(:keywords) %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -3,4 +3,8 @@ class Service < ActiveRecord::Base
   has_many :invoices
   has_many :contractor_services
   has_many :contractors, :through => :contractor_services
+
+  def name
+  	self.service_name
+  end
 end

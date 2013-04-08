@@ -3,19 +3,22 @@ Prosynergy::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :contractor_services
+  match "search" => "home#search", :via => :get, :as => "search"
+  match "search_results" => "home#search_results", :via => :post, :as => "search_results"
+
+  #resources :contractor_services
 
 
-  resources :services
+  #resources :services
 
 
-  resources :invoices
+  #resources :invoices
 
 
-  resources :customers
+  #resources :customers
 
 
-  resources :contractors
+  #resources :contractors
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

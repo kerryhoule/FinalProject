@@ -102,6 +102,13 @@ li
 	background: url("/assets/menu_a.png") repeat-x top;
 }
 
+#container
+{
+	background: #FFF;
+	width: 850px;
+	height: 400px;
+}
+
 #bottomInfo
 {
 	float: left;

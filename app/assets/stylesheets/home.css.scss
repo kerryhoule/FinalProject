@@ -1,0 +1,23 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#content
+{
+	float: left;
+	width: 425px;
+	height: 400px;
+}
+
+#content h1, #content h2, #content p
+{
+	margin: 15px;
+}
+
+#p1img
+{
+	float: right;
+	margin-right: -410px;
+	margin-top: -250px;
+	border: 1px solid #000;
+}

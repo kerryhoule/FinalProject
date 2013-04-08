@@ -9,7 +9,7 @@
 <body>
 	<section id="top">
 		<!--Canvas under construction-->
-		
+		<%= link_to 'Search', search_path %>
 		<div id="hoverpicture">
 			<canvas id="canvas" width="885" height="171"></canvas>
 		</div>
@@ -17,7 +17,7 @@
 	<section id="midNav">
 		<nav>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><%= link_to 'Home', root_path %></li>
 				<li><a href="investments.html">Investments</a></li>
 				<li><a href="insurance.html">Insurance</a></li>
 				<li><a href="mortgages.html">Mortgages</a></li>
@@ -30,9 +30,9 @@
 			</ul>
 		</nav>
 	</section>
-	<section id="content">
+	<div id="container">
 	<%= yield %>
-	</section>
+	</div>
 	<section id="bottomInfo">
 		<footer>
 			<nav id="bottomNav">

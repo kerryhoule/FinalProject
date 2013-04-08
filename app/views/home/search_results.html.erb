@@ -1,0 +1,6 @@
+<h1>Search Results for '<%= params[:keywords] %>'</h1>
+
+<% if @customers.empty? %>
+	<p><em>No results found.</em></p>
+<% end %>
+<%= render @customers %>
