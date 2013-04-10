@@ -3,6 +3,16 @@ Prosynergy::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  match "investments" => "home#investments", :via => :get, :as => "investments"
+  match "insurance" => "home#insurance", :via => :get, :as => "insurance"
+  match "mortgages" => "home#mortgages", :via => :get, :as => "mortgages"
+  match "homeequity" => "home#homeequity", :via => :get, :as => "homeequity"
+  match "autofinance" => "home#autofinance", :via => :get, :as => "autofinance"
+  match "realestate" => "home#realestate", :via => :get, :as => "realestate"
+  match "debtconsolidation" => "home#debtconsolidation", :via => :get, :as => "debtconsolidation"
+  match "join_us" => "home#join_us", :via => :get, :as => "join_us"
+  match "contact_us" => "home#contact_us", :via => :get, :as => "contact_us"
+  match "about_us" => "home#about_us", :via => :get, :as => "about_us"
   match "search_results" => "home#search_results", :via => :post, :as => "search_results"
 
   #resources :contractor_services
