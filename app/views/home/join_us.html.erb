@@ -1,0 +1,7 @@
+<h1>Our Team</h1>
+
+<% @contractors.each do |contractor| %>
+	<p>Name: <%= contractor.first_name + " " + contractor.last_name %></p>
+	<p>Phone: <%= contractor.phone_number %></p>
+	<%= image_tag contractor.picture_file %>
+<% end %>

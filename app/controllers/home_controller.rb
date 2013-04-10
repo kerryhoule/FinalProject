@@ -32,7 +32,7 @@ class HomeController < ApplicationController
   end
 
   def join_us
-
+  	@contractors = Contractor.all
   end
 
   def contact_us

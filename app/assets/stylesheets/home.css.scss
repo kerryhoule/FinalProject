@@ -5,20 +5,25 @@
 #content
 {
 	float: left;
-	width: 425px;
+	width: 825px;
 	height: 400px;
 }
 
-#content h1, #content h2
+#content h1
 {
 	margin: 15px;
 	text-shadow: 1px 1px 4px #000000;
     filter: dropshadow(color=#000000, offx=2, offy=2);
 }
 
-#content p
+#content h2, #content p, #content hr
 {
 	margin: 15px;
+}
+
+#paragraph
+{
+	width: 400px;
 }
 
 #p1img
@@ -48,8 +53,7 @@
 #map
 {
 	float: right;
-	margin-top: -200px;
-	margin-right: -410px;
+	margin-top: 10px;
 	border: 2px solid #666;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
