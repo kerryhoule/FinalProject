@@ -3,7 +3,6 @@ Prosynergy::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  match "search" => "home#search", :via => :get, :as => "search"
   match "search_results" => "home#search_results", :via => :post, :as => "search_results"
 
   #resources :contractor_services

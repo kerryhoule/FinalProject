@@ -152,6 +152,7 @@ DEPENDENCIES
   activeadmin
   coffee-rails (~> 3.2.1)
   jquery-rails
+  kaminari
   meta_search
   rails (= 3.2.9)
   sass-rails (~> 3.2.3)

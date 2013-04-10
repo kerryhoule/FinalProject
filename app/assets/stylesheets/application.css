@@ -45,6 +45,13 @@ li
 	height: 181px;
 }
 
+#searchbar
+{
+	float: right;
+	margin-top: 5px;
+	color: #FFF;
+}
+
 #canvas
 {
 	float: right;

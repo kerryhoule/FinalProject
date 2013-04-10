@@ -7,13 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<section id="top">
+	<header id="top">
 		<!--Canvas under construction-->
-		<%= link_to 'Search', search_path %>
+		<div id="searchbar">
+			<%= form_tag(search_results_path) do %>
+  				<%= text_field_tag(:keywords) %>
+  				<%= submit_tag("Search") %>
+			<% end %>
+		</div>
 		<div id="hoverpicture">
 			<canvas id="canvas" width="885" height="171"></canvas>
 		</div>
-	</section>
+	</header>
 	<section id="midNav">
 		<nav>
 			<ul>
