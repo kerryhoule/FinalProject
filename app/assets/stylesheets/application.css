@@ -113,26 +113,22 @@ li
 {
 	background: #FFF;
 	width: 850px;
-	height: 400px;
 }
 
 #bottomInfo
 {
-	float: left;
 	background-image: url('/assets/bot-bckgrnd.png');
-	background-position: center top, center bottom;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 100%;
 	height: 200px;
 }
 
 #bottomNav
 {
-	position: relative;
-	left: -351px;
-	top: 65px;
-	text-align: center;
+	float: left;
+	margin-top: 150px;
+	margin-left: -20px;
 	font-size: 14px;
 }
 
@@ -150,8 +146,8 @@ li
 #bottomInfo p
 {
 	float: right;
+	margin-top: 132.5px;
 	margin-right: 50px;
-	margin-top: 0px;
 	color: #5F5F94;
 	background: #FCF2EE;
 	border-radius: 10px;

@@ -4,9 +4,7 @@
 
 #content
 {
-	float: left;
 	width: 825px;
-	height: 400px;
 }
 
 #content h1
@@ -40,10 +38,8 @@
 #p2img
 {
 	float: right;
-	margin-right: -410px;
-	margin-top: -140px;
-	width: 80%;
-	height: 80%;
+	width: 100px;
+	height: 200px;
 	border: 1px solid #000;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -58,4 +54,17 @@
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
+}
+
+#contractor
+{
+	display: inline-block;
+	list-style-type: none;
+	border: 1px solid #000;
+}
+
+.contractors
+{
+	width: 150px;
+	height: 200px;
 }

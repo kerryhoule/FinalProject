@@ -1,0 +1,10 @@
+<li id="contractor">
+	<p>Name: <%= contractor.first_name + " " + contractor.last_name %></p>
+	<p>Phone: <%= contractor.phone_number %></p>
+	<% if contractor.services.present? %>
+		<p>What they specialize in: <% contractor.services.each do |service| %>
+										<%= service.service_name %>
+									<% end %>
+	<% end %>
+	<%= image_tag contractor.picture_file, :class => 'contractors' %>
+</li>

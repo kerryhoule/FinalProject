@@ -1,19 +1,20 @@
-<h1>Search Results for '<%= params[:keywords] %>'</h1>
-<hr />
-<h1>Customers</h1>
-<% if @customers.empty? %>
-	<p><em>No customers found.</em></p>
-<% end %>
-<%= render @customers %>
+<section id="content">
+	<h1>Search Results for '<%= params[:keywords] %>'</h1>
+	<hr />
 
-<h1>Contractors</h1>
-<% if @contractors.empty? %>
-	<p><em>No contractors found.</em></p>
-<% end %>
-<%= render @contractors %>
+	<h2>Contractors</h1>
+	<ul>
+		<% if @contractors.empty? %>
+			<p><em>No contractors found.</em></p>
+		<% end %>
+		<%= render @contractors %>
+	</ul>
 
-<h1>Services</h1>
-<% if @services.empty? %>
-	<p><em>No services found.</em></p>
-<% end %>
-<%= render @services %>
+	<h2>Services</h1>
+	<ul>
+		<% if @services.empty? %>
+			<p><em>No services found.</em></p>
+		<% end %>
+		<%= render @services %>
+	</ul>
+</section>

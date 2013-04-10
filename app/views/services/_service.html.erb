@@ -1,0 +1,9 @@
+<li id="contractor">
+	<p>Name: <%= service.service_name %></p>
+	<p>Cost: <%= service.service_cost %></p>
+	<% if service.contractors.present? %>
+		<p>Who does this?: <% service.contractors.each do |contractor| %>
+										<%= contractor.first_name + " " + contractor.last_name %>
+									<% end %>
+	<% end %>
+</li>
