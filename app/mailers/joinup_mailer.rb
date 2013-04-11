@@ -4,9 +4,9 @@ class JoinupMailer < ActionMailer::Base
   	def join_email(new_contractor, description)
   		@new_contractor = new_contractor
   		@description = description
-  		@admins = AdminUser.all
-  		@admins.each do |admin|
-			mail(:to => admin.email, :subject => "Someone wants to talk to us")
-		end
+  		#@admins = AdminUser.all
+  		#@admins.each do |admin|
+			mail(:to => 'stungeye@gmail.com', :subject => "Someone wants to talk to us")
+		#end
   	end
 end

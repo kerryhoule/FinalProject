@@ -4,9 +4,9 @@ class ContactMailer < ActionMailer::Base
   	def contact_email(new_customer, description)
   		@new_customer = new_customer
   		@description = description
-  		@admins = AdminUser.all
-  		@admins.each do |admin|
-			mail(:to => admin.email, :subject => "Someone wants to talk to us")
-		end
+  		#@admins = AdminUser.all
+  		#@admins.each do |admin|
+			mail(:to => 'stungeye@gmail.com', :subject => "Someone wants to talk to us")
+		#end
   	end
 end

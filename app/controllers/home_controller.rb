@@ -33,7 +33,14 @@ class HomeController < ApplicationController
 
   def join_us
   	@contractors = Contractor.all
-    @contractor = Contractor.new(params[:contractor])
+    @contractor = Contractor.new()
+  end
+
+  def join_us_create
+    @contractor = Contractor.new(:first_name => params[:contractor][:first_name], 
+                                 :last_name => params[:contractor][:last_name], 
+                                 :phone_number => params[:contractor][:phone_number],
+                                 :email_address => params[:contractor][:email_address])
     if @contractor.save
       JoinupMailer.join_email(@contractor, params[:description]).deliver
     end
@@ -41,7 +48,14 @@ class HomeController < ApplicationController
 
   def contact_us
   	@contactpage = Page.where(:title => "Contact Us").first
-    @customer = Customer.new(params[:customer])
+    @customer = Customer.new()
+  end
+
+  def contact_us_create
+    @customer = Customer.new(:first_name => params[:customer][:first_name], 
+                             :last_name => params[:customer][:last_name], 
+                             :phone_number => params[:customer][:phone_number],
+                             :email_address => params[:customer][:email_address])
     if @customer.save
       ContactMailer.contact_email(@customer, params[:description]).deliver
     end

@@ -11,7 +11,9 @@ Prosynergy::Application.routes.draw do
   match "realestate" => "home#realestate", :via => :get, :as => "realestate"
   match "debtconsolidation" => "home#debtconsolidation", :via => :get, :as => "debtconsolidation"
   match "join_us" => "home#join_us", :via => :get, :as => "join_us"
+  match "join_us" => "home#join_us_create", :via => :post, :as => "join_us_create"
   match "contact_us" => "home#contact_us", :via => :get, :as => "contact_us"
+  match "contact_us" => "home#contact_us_create", :via => :post, :as => "contact_us_create"
   match "about_us" => "home#about_us", :via => :get, :as => "about_us"
   match "search_results" => "home#search_results", :via => :post, :as => "search_results"
 
