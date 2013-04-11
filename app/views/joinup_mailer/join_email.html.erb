@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= @new_contractor.first_name %> wants to join us.</h1>
+    <p>
+      Full Name: <%= @new_contractor.first_name + " " + @new_contractor.last_name %>
+    </p>
+    <p>
+      Phone: <%= @new_contractor.phone_number %>
+    </p>
+    <p>
+      Email: <%= @new_contractor.email_address %>
+    </p>
+    <p>
+      What they're bringing to the team: <%= @description %>
+    </p>
+    <p>
+      If you would like to log in and alter details go to: .
+    </p>
+  </body>
+</html>

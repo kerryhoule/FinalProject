@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= @new_customer.first_name %> wants to talk to us.</h1>
+    <p>
+      Full Name: <%= @new_customer.first_name + " " + @new_customer.last_name %>
+    </p>
+    <p>
+      Phone: <%= @new_customer.phone_number %>
+    </p>
+    <p>
+      Email: <%= @new_customer.email_address %>
+    </p>
+    <p>
+      What they're interested in: <%= @description %>
+    </p>
+    <p>
+      If you would like to log in and alter details go to: .
+    </p>
+  </body>
+</html>

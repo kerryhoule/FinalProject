@@ -33,10 +33,18 @@ class HomeController < ApplicationController
 
   def join_us
   	@contractors = Contractor.all
+    @contractor = Contractor.new(params[:contractor])
+    if @contractor.save
+      JoinupMailer.join_email(@contractor, params[:description]).deliver
+    end
   end
 
   def contact_us
   	@contactpage = Page.where(:title => "Contact Us").first
+    @customer = Customer.new(params[:customer])
+    if @customer.save
+      ContactMailer.contact_email(@customer, params[:description]).deliver
+    end
   end
 
   def about_us
