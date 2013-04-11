@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-
+    @indexpage = Page.where(:title => "Welcome").first
   end
 
   def investments
@@ -37,12 +37,10 @@ class HomeController < ApplicationController
   end
 
   def join_us_create
-    @contractor = Contractor.new(:first_name => params[:contractor][:first_name], 
-                                 :last_name => params[:contractor][:last_name], 
-                                 :phone_number => params[:contractor][:phone_number],
-                                 :email_address => params[:contractor][:email_address])
+    @contractor = Contractor.new(params[:contractor])
     if @contractor.save
       JoinupMailer.join_email(@contractor, params[:description]).deliver
+      redirect_to join_us_path
     end
   end
 
@@ -52,12 +50,10 @@ class HomeController < ApplicationController
   end
 
   def contact_us_create
-    @customer = Customer.new(:first_name => params[:customer][:first_name], 
-                             :last_name => params[:customer][:last_name], 
-                             :phone_number => params[:customer][:phone_number],
-                             :email_address => params[:customer][:email_address])
+    @customer = Customer.new(params[:customer])
     if @customer.save
       ContactMailer.contact_email(@customer, params[:description]).deliver
+      redirect_to contact_us_path
     end
   end
 
