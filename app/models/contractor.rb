@@ -1,5 +1,5 @@
 class Contractor < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :phone_number, :picture_file
+  attr_accessible :first_name, :last_name, :phone_number, :email_address, :picture_file
   has_many :invoices
   has_many :contractor_services
   has_many :services, :through => :contractor_services
