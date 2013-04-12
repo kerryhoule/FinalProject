@@ -1,6 +1,7 @@
 <section id="content">
-	<h1>Stocks? Bonds? Mutual Funds?</h1>
-	<hr/>
-	<p>Unsure of where to start investing? Sit down with one of our professionals and create your investment portfolio today. From global equities to local government and corporate bonds, our professionals will get you on the right path to financial freedom.</p>
-	<img id="p2img" src="/assets/pg2img.jpg" alt="Page 2 Image" />
+	<%= image_tag 'pg2img.jpg', :id => 'p2img' %>
+	<h1><%= @investmentpage.header %></h1>
+	<p>
+		<%= @investmentpage.content.html_safe %>
+	</p>
 </section>

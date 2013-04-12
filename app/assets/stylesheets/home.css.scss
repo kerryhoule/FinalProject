@@ -16,10 +16,10 @@
 
 #content h2, #content p, #content hr
 {
-	margin: 15px;
+	margin: 10px;
 }
 
-#paragraph
+#content h1, #content p
 {
 	width: 400px;
 }
@@ -27,8 +27,6 @@
 #p1img
 {
 	float: right;
-	margin-right: -410px;
-	margin-top: -250px;
 	border: 1px solid #000;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -38,8 +36,9 @@
 #p2img
 {
 	float: right;
-	width: 100px;
-	height: 200px;
+	margin-right: 25px;
+	height: 250px;
+	width: 350px;
 	border: 1px solid #000;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
