@@ -1,37 +1,38 @@
 class HomeController < ApplicationController
   def index
-    @indexpage = Page.where(:title => "Welcome").first
+    @indexpage = Page.find(5)
   end
 
   def investments
-
+    @investmentpage = Page.find(6)
   end
 
   def insurance
-
+    @insurancepage = Page.find(7)
   end
 
   def mortgages
-
+    @mortgagepage = Page.find(8)
   end
 
   def homeequity
-
+    @homeequitypage = Page.find(9)
   end
 
   def autofinance
-
+    @autofinancepage = Page.find(10)
   end
 
   def realestate
-
+    @realestatepage = Page.find(11)
   end
 
   def debtconsolidation
-
+    @debtconsolidationpage = Page.find(12)
   end
 
   def join_us
+    @joinpage = Page.find(13)
   	@contractors = Contractor.all
     @contractor = Contractor.new()
   end
@@ -45,7 +46,7 @@ class HomeController < ApplicationController
   end
 
   def contact_us
-  	@contactpage = Page.where(:title => "Contact Us").first
+  	@contactpage = Page.find(4)
     @customer = Customer.new()
   end
 
@@ -58,7 +59,7 @@ class HomeController < ApplicationController
   end
 
   def about_us
-  	@aboutpage = Page.where(:title => "About Us").first
+  	@aboutpage = Page.find(3)
   end
 
   def search_results
